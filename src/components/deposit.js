@@ -9,12 +9,12 @@ function Deposit({balance, setBalance}) {
   });
 
   return (
-    <div>
+    <div className="px-6 py-4">
       <p>Mau tambah saldo?</p>
-      <button onClick={() => setBalance(balance + 1000)}>
+      <button onClick={() => setBalance(balance + 1000)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
         Tambah seribu
       </button>
-      <button onClick={() => setBalance(balance + 5000)}>
+      <button onClick={() => setBalance(balance + 5000)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
         Tambah goceng
       </button>
       <hr></hr>

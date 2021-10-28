@@ -9,8 +9,8 @@ function Balance({balance}) {
   });
 
   return (
-    <div>
-      <p>Saldo Anda : {balance}</p>
+    <div className="px-6 py-4">
+      <p>Saldo Anda : <span className="text-2xl font-bold">{balance}</span></p>
       <hr></hr>
     </div>
   );
