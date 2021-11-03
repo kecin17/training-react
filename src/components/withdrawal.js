@@ -4,12 +4,8 @@ import {
   decrementByAmount,
 } from '../reducers/cashReducer'
 
-function Withdrawal({balance, setBalance}) {
+function Withdrawal() {
   const dispatch = useDispatch();
-  // Similar to componentDidMount and componentDidUpdate:
-  useEffect(() => {
-    // Update the document title using the browser API
-  });
 
   return (
     <div className="px-6 py-4">

@@ -15,9 +15,9 @@ function CashContainer() {
     return (
         <div className="App max-w-sm rounded overflow-hidden shadow-lg text-lg justify-center">
             <h2 className="font-bold text-gray-500 text-xl mb-2">Hello Everyone</h2>
-            <Balance balance={balance} setBalance={setBalance}></Balance>
-            <Withdrawal balance={balance} setBalance={setBalance}></Withdrawal>
-            <Deposit balance={balance} setBalance={setBalance}></Deposit>
+            <Balance />
+            <Withdrawal />
+            <Deposit />
         </div>
     );
 }

@@ -4,7 +4,6 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import CashContainer from './components/cash.container';
 import Navbar from './components/navbar';
