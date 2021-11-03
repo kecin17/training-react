@@ -1,20 +1,44 @@
 import './App.css';
 import React, { useState } from 'react';
-import Balance from './components/balance';
-import Withdrawal from './components/withdrawal';
-import Deposit from './components/deposit';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import CashContainer from './components/cash.container';
+import Navbar from './components/navbar';
 
 function App() {
-  const [balance, setBalance] = useState(10000);
 
   return (
-    <div className="App max-w-sm rounded overflow-hidden shadow-lg text-lg justify-center">
-      <h2 className="font-bold text-gray-500 text-xl mb-2">Hello Everyone</h2>
-      <Balance balance={balance} setBalance={setBalance}></Balance>
-      <Withdrawal balance={balance} setBalance={setBalance}></Withdrawal>
-      <Deposit balance={balance} setBalance={setBalance}></Deposit>
-    </div>
+    <Router>
+      <Navbar />
+      {/* A <Switch> looks through its children <Route>s and
+          renders the first one that matches the current URL. */}
+      <Switch>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contactus">
+          <Contactus />
+        </Route>
+        <Route path="/">
+          <CashContainer />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
+function Home() {
+  return <h2>Welcome to the jungle</h2>;
+}
 
+function About() {
+  return <h2>About</h2>;
+}
+
+function Contactus() {
+  return <h2>Contact Us</h2>;
+}
 export default App;

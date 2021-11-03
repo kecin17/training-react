@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  selectCount
+} from '../reducers/cashReducer'
 
-function Balance({balance}) {
-
-  // Similar to componentDidMount and componentDidUpdate:
-  useEffect(() => {
-    // Update the document title using the browser API
-    document.title = `WOEEE`;
-  });
+function Balance() {
+  const count = useSelector(selectCount)
 
   return (
     <div className="px-6 py-4">
-      <p>Saldo Anda : <span className="text-2xl font-bold">{balance}</span></p>
+      <p>Saldo Anda : <span className="text-2xl font-bold">{count}</span></p>
       <hr></hr>
     </div>
   );
